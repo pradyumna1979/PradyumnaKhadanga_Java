@@ -9,6 +9,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
@@ -110,7 +111,7 @@ public class PositionCalculatorApplication {
 				}).peek(System.out::println)
 				.collect(Collectors.toList());
 		
-		Path path = Paths.get(ClassLoader.getSystemResource("EndOfDay_Positions.txt").toURI());
+		Path path = Paths.get(ClassLoader.getSystemResource("Expected_EndOfDay_Positions.txt").toURI());
 		Iterable<String> iterable = str;
 		Charset charset = Charset.forName("UTF-8");
 
